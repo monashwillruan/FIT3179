@@ -14,7 +14,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/monashwillruan/FIT3179/data/au.csv"
+        "url": "https://monashwillruan.github.io/FIT3179/data/au.csv"
       },
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
