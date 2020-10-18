@@ -1,4 +1,4 @@
-city,lat,lng,country,iso2,admin,capital,population,population_proper
+city,latitude,longitude,country,iso2,admin,capital,population,population_proper
 Sydney,-33.861481,151.205475,Australia,AU,New South Wales,admin,4630000,3641422
 South Melbourne,-37.833333,144.966667,Australia,AU,Victoria,,4170000,93625
 Brisbane,-27.47101,153.024292,Australia,AU,Queensland,admin,1860000,926353
