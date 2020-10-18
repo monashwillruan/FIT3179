@@ -21,9 +21,9 @@
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
         "size": {
-          "field": "mag",
+          "field": "population",
           "type": "quantitative",
-          "scale": {"domain": [4, 8]}
+          "scale": {"domain": [0, 10000000]}
         },
         "color": {
           "field": "depth",
