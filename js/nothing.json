@@ -26,9 +26,7 @@
           "scale": {"domain": [0, 10000000]}
         },
         "color": {
-          "field": "depth",
-          "type": "quantitative",
-          "scale": {"scheme": "reds"}
+          "value":"red"
         }
       }
     }
