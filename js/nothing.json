@@ -3,7 +3,7 @@
   "width": 800,
   "height": 500,
   "title": "Australian Cities",
-  "projection": {"type": "equalEarth"},
+  "projection": {"type": "conicEqualArea"},
   "layer": [
     {
       "data": {
