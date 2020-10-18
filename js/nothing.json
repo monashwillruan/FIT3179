@@ -16,9 +16,7 @@
       "data": {
         "url": "https://monashwillruan.github.io/FIT3179/data/au.csv"
       },
-      "mark": {"type": "circle", 
-               "tooltip": [{"field": "city", "type": "nominal"},
-                          {"field": "population", "type": "quantitative"}]
+      "mark": {"type": "circle"
               },
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
@@ -30,7 +28,12 @@
         },
         "color": {
           "value":"red"
-        }
+        },
+        
+        "tooltip": [
+                 {"field": "city", "type": "nominal"},
+                 {"field": "population", "type": "quantitative"}]
+
       }
     }
   ]
