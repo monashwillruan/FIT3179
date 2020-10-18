@@ -23,7 +23,7 @@
         "size": {
           "field": "population",
           "type": "quantitative",
-          "scale": {"domain": [0, 7000000], "type":"log"}
+          "scale": {"type":"log"}
         },
         "color": {
           "value":"red"
