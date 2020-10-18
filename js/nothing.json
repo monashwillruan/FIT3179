@@ -25,6 +25,11 @@
           "type": "quantitative",
           "scale": {"domain": [0, 7000000]}
         },
+        "color": {
+          "field": "depth",
+          "type": "quantitative",
+          "scale": {"scheme": "reds"}
+        }
       }
     }
   ]
