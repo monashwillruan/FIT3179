@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 700,
-  "height": 350,
+  "width": 400,
+  "height": 200,
   "title": "Populations of Australian Cities and Towns",
   "projection": {"type": "mercator"},
   "layer": [
