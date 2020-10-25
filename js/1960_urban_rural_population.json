@@ -1,0 +1,17 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A simple pie chart with embedded data.",
+  "title":"Percentage Population in Urban and Rural Areas",
+  "data": {
+    "values": [
+      {"category": "Urban", "value": 81.3},
+      {"category": "Rural", "value": 18.7}
+    ]
+  },
+  "mark": "arc",
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {"field": "category", "type": "nominal"}
+  },
+  "view": {"stroke": null}
+}
