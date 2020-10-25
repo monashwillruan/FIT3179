@@ -28,7 +28,7 @@
         "name": "Minimum Population: "
       }
     },
-    ]
+    ],
       "mark": {"type": "circle"
               },
       "encoding": {
