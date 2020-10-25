@@ -10,7 +10,6 @@
         "url": "https://monashwillruan.github.io/FIT3179/js/Aus.json",
         "format": {"type": "topojson", "feature": "custom"}
       },
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
     },
     {
       "data": {
