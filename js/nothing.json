@@ -58,12 +58,61 @@
                }
             ]
          },
-         "transform": [
-            {"filter": "datum.population > Population_Above"}
+         "transform":[
+            {
+               "filter":"datum.population > Population_Above"
+            }
          ]
-      }
-   ],
-               "params":[
+      },
+      {
+         "data":{
+            "url":"https://monashwillruan.github.io/FIT3179/data/au.csv"
+         },
+         "mark":{
+            "type":"text",
+            "align":"right",
+            "baseline":"middle",
+            "dx":-12,
+            "fontSize":11.5,
+            "fontStyle":"italic"
+         },
+         "encoding":{
+            "longitude":{
+               "field":"longitude",
+               "type":"quantitative"
+            },
+            "latitude":{
+               "field":"latitude",
+               "type":"quantitative"
+            },
+            "text":{
+               "field":"city",
+               "type":"nominal"
+            },
+            "tooltip":[
+               {
+                  "field":"city",
+                  "type":"nominal"
+               },
+               {
+                  "field":"population",
+                  "type":"quantitative"
+               }
+            ],
+            "color":{
+               "value":"black"
+            },
+            "opacity":{
+               "condition":{
+                  "test":"datum['capital'] == 'admin' || datum['city'] == 'Melbourne'",
+                  "value":1
+               },
+               "value":0
+            }
+         }
+         }
+         ],
+         "params":[
             {
                "name":"Population_Above",
                "value":0,
@@ -76,4 +125,4 @@
                }
             }
          ]
-}
+      }
