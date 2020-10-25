@@ -8,7 +8,7 @@
     {
       "data": {
         "url": "https://monashwillruan.github.io/FIT3179/js/Aus.json",
-        "format": {"type": "topojson", "feature": "custom"}
+        "format": {"type": "topojson", "feature": "austates"}
       },
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
     },
