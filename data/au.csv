@@ -1,6 +1,6 @@
 city,latitude,longitude,country,iso2,admin,capital,population,population_proper
 Sydney,-33.861481,151.205475,Australia,AU,New South Wales,admin,4630000,3641422
-South Melbourne,-37.833333,144.966667,Australia,AU,Victoria,,4170000,93625
+Melbourne,-37.833333,144.966667,Australia,AU,Victoria,,4170000,93625
 Brisbane,-27.47101,153.024292,Australia,AU,Queensland,admin,1860000,926353
 Perth,-31.95224,115.861397,Australia,AU,Western Australia,admin,1532000,880216
 Adelaide,-34.928661,138.598633,Australia,AU,South Australia,admin,1145000,836354
@@ -216,5 +216,4 @@ Karumba,-17.488819,140.838196,Australia,AU,Queensland,,173,173
 Windorah,-25.42224,142.656597,Australia,AU,Queensland,,158,158
 Bedourie,-24.3637,139.465277,Australia,AU,Queensland,,142,142
 Kingoonya,-30.9,135.3,Australia,AU,South Australia,,50,50
-Melbourne,-37.813938,144.963425,Australia,AU,Victoria,admin,,
 Currie,-39.929759,143.853847,Australia,AU,Tasmania,minor,,
