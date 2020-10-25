@@ -16,6 +16,19 @@
       "data": {
         "url": "https://monashwillruan.github.io/FIT3179/data/au.csv"
       },
+    "params": [
+    {
+      "name": "Population_Above",
+      "value": 0,
+      "bind": {
+        "input": "population",
+        "min": 0,
+        "max": 100000000,
+        "step": 1000000,
+        "name": "Minimum Population: "
+      }
+    },
+    ]
       "mark": {"type": "circle"
               },
       "encoding": {
