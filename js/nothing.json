@@ -9,10 +9,10 @@
    "layer":[
       {
          "data":{
-            "url":"https://monashwillruan.github.io/FIT3179/js/Aus.json",
+            "url":"https://monashwillruan.github.io/FIT3179/js/AusMap.json",
             "format":{
                "type":"topojson",
-               "feature":"custom"
+               "feature":"Aus"
             }
          },
          "mark":{
