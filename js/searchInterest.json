@@ -1,128 +1,38 @@
 {
-   "$schema":"https://vega.github.io/schema/vega-lite/v4.json",
-   "width":800,
-   "height":400,
-   "title":"Populations of Australian Cities and Towns",
-   "projection":{
-      "type":"mercator"
-   },
-   "layer":[
-      {
-         "data":{
-            "url":"https://monashwillruan.github.io/FIT3179/js/AusMap.json",
-            "format":{
-               "type":"topojson",
-               "feature":"Aus"
-            }
-         },
-         "mark":{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url":"https://monashwillruan.github.io/FIT3179/js/AusMap.json",
+    "format": {
+      "type": "topojson",
+      "feature": "Aus"
+    }
+  },
+  "transform": [{
+    "lookup": "id",
+    "from": {
+      "data": {
+        "url": "https://monashwillruan.github.io/FIT3179/data/searches.csv"
+      },
+      "key": "Region",
+      "fields": ["Interest"]
+    }
+  }],
+  "projection": {
+    "type": "mercator"
+  },
+   "mark":{
             "type":"geoshape",
-            "fill":"lightgray",
             "stroke":"white"
-         }
-      },
-      {
-         "data":{
-            "url":"https://monashwillruan.github.io/FIT3179/data/au.csv"
-         },
-         "mark":{
-            "type":"circle"
-         },
-         "encoding":{
-            "longitude":{
-               "field":"longitude",
-               "type":"quantitative"
-            },
-            "latitude":{
-               "field":"latitude",
-               "type":"quantitative"
-            },
-            "size":{
-               "field":"population",
-               "type":"quantitative",
-               "scale":{
-                  "type":"sqrt"
-               }
-            },
-            "color":{
-               "value":"red"
-            },
-            "tooltip":[
-               {
-                  "field":"city",
-                  "type":"nominal"
-               },
-               {
-                  "field":"population",
-                  "type":"quantitative"
-               }
-            ]
-         },
-         "transform":[
-            {
-               "filter":"datum.population > Population_Above"
-            }
-         ]
-      },
-      {
-         "data":{
-            "url":"https://monashwillruan.github.io/FIT3179/data/au.csv"
-         },
-         "mark":{
-            "type":"text",
-            "align":"right",
-            "baseline":"middle",
-            "dx":-12,
-            "fontSize":11.5,
-            "fontStyle":"italic"
-         },
-         "encoding":{
-            "longitude":{
-               "field":"longitude",
-               "type":"quantitative"
-            },
-            "latitude":{
-               "field":"latitude",
-               "type":"quantitative"
-            },
-            "text":{
-               "field":"city",
-               "type":"nominal"
-            },
-            "tooltip":[
-               {
-                  "field":"city",
-                  "type":"nominal"
-               },
-               {
-                  "field":"population",
-                  "type":"quantitative"
-               }
-            ],
-            "color":{
-               "value":"black"
-            },
-            "opacity":{
-               "condition":{
-                  "test":"datum['capital'] == 'admin' || datum['city'] == 'Melbourne'",
-                  "value":1
-               },
-               "value":0
-            }
-         }
-         }
-         ],
-         "params":[
-            {
-               "name":"Population_Above",
-               "value":0,
-               "bind":{
-                  "input":"range",
-                  "min":0,
-                  "max":100000,
-                  "step":100,
-                  "name":"Minimum Population: "
-               }
-            }
-         ]
+
+  },
+  "encoding": {
+       "color": {
+      "field": "Interest",
+      "type": "quantitative"
       }
+         }
+}
+
+
