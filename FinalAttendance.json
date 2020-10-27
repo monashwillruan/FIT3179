@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A simple bar chart with embedded data.",
+  "title": "Grand Final Attendance",
+  "data": {
+    "values": [
+      {"a": "2019", "b": 100014}, {"a": "2020", "b": 30000}, {"a": "2018", "b": 100022 }
+    ]
+  },
+  "width": 250,
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "a", "type": "nominal", "title": "Season", "axis": {"labelAngle": 0}},
+    "y": {"field": "b", "type": "quantitative", "title": "Attendance"},
+     "tooltip": {"field": "b", "type": "quantitative"}
+  }
+}
+
