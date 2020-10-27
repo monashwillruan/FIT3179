@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A scatterplot describing player goals and disposals by team.",
+  "data": {
+    "url": "https://monashwillruan.github.io/FIT3179/data/PlayerStats.csv"
+  },
+  "title": "Player Goals and Disposals",
+  "mark": "point",
+  "width": 800,
+  "height":400,
+  "encoding": {
+    "x": {
+      "field": "DI",
+      "type": "quantitative",
+      "title": "Disposals",
+      "scale": {"zero": false}
+    },
+    "y": {
+      "field": "GL",
+      "type": "quantitative",
+      "title": "Goals",
+      "scale": {"zero": false}
+    },
+    "color": {"field": "TM", "type": "nominal", "title": "Team"},
+    "tooltip": [
+      {"field": "Player", "type": "nominal", "title": "Player Name: "},
+      {
+      "field": "GL",
+      "type": "quantitative",
+      "title": "Goals"
+    },
+    {
+      "field": "DI",
+      "type": "quantitative",
+      "title": "Disposals"
+    }
+    ],
+    "opacity":{"condition":{"selection":"team","value":0.9},"value":0.2}
+  },
+  "selection":{"team":{"type":"multi","fields":["TM"],"bind":"legend"}}
+}
