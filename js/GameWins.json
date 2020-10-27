@@ -7,6 +7,7 @@
       {"Team": "Richmond", "Wins": 12}, {"Team": "Gold Coast", "Wins": 5}, {"Team": "Greater Western Sydney", "Wins": 8}, {"Team": "Western", "Wins": 10}, {"Team": "Hawthorn", "Wins": 5}, {"Team": "Essendon", "Wins": 6},{"Team": "Sydney", "Wins": 5},{"Team": "Adelaide", "Wins": 3},{"Team": "Fremantle", "Wins": 7}, {"Team": "Carlton", "Wins": 7}, {"Team": "Melbourne", "Wins": 9}, {"Team": "St. Kilda", "Wins": 10}, {"Team": "West Coast", "Wins": 12},{"Team": "Brisbane", "Wins": 14}, {"Team": "North Melbourne", "Wins": 3}
     ]
   },
+  "width":"container"
   "selection": {
     "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
     "select": {"type": "multi"}
