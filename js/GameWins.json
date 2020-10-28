@@ -47,5 +47,8 @@
       ],
       "value": 0
     }
-  }
+  },
+  "config": {
+    "background": "#fcf8f8"
+    }
 }
