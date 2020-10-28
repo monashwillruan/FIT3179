@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Tackles Laid in Grand Final",
+  "data": {
+    "values": [
+      {"Team": "Richmond", "Tackles": 73},
+      {"Team": "Geelong", "Tackles": 51}
+    ]
+  },
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "Tackles", "type": "quantitative", "title": "hello"},
+    "color": {"field": "Team", "type": "nominal"},
+     "tooltip": [
+      {"field": "Team", "type": "nominal"},
+      {
+      "field": "Tackles",
+      "type": "quantitative"
+    }]
+  },
+  "view": {"stroke": null},
+  "config": {
+    "background": "#fcf8f8"
+    }
+}
