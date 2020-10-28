@@ -19,7 +19,7 @@
 
   },
   "encoding": {
-    "x": {"field": "Wins", "type": "quantitative"},
+    "x": {"field": "Wins", "type": "quantitative", "axis":{"grid": false}},
     "y": {"field": "Team", "type": "nominal", "sort": "-x", "axis":{"title":null}},
     "fillOpacity": {
       "condition": {"selection": "select", "value": 1},
