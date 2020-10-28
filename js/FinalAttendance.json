@@ -6,7 +6,7 @@
       {"a": "2019", "b": 100014}, {"a": "2020", "b": 30000}, {"a": "2018", "b": 100022 }
     ]
   },
-  "width": 250,
+  "width": 200,
   "mark": "bar",
   "encoding": {
     "x": {"field": "a", "type": "nominal", "title": "Season", "axis": {"labelAngle": 0}},
