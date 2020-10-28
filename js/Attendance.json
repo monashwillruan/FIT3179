@@ -1,10 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": "container",
+  "title": "Average and Grand Final Attendance Figures by Season (2015-2020)",
   "height": 200,
   "data": {
     "values": [
-      {"a": "2015", "b": 98632, "c": "Grand Final Attendance"},{"a": "2016", "b": 99981, "c": "Grand Final Attendance"},{"a": "2017", "b": 100021, "c": "Grand Final Attendance"},{"a": "2019", "b": 100014, "c": "Grand Final Attendance"}, {"a": "2020", "b": 30000, "c":"Grand Final Attendance"}, {"a": "2018", "b": 100022, "c":"Grand Final Attendance"},  {"a": "2019", "b": 35108, "c": "Average Attendance"},{"a": "2017", "b": 	33398, "c": "Average Attendance"}, {"a": "2016", "b": 	33425, "c": "Average Attendance"},{"a": "2015", "b": 32254, "c": "Average Attendance"},{"a": "2020", "b": 5973, "c": "Average Attendance"}, {"a": "2018", "b": 36692, "c": "Average Attendance"}
+      {"a": "2015", "b": 98632, "c": "Grand Final"},{"a": "2016", "b": 99981, "c": "Grand Final"},{"a": "2017", "b": 100021, "c": "Grand Final"},{"a": "2019", "b": 100014, "c": "Grand Final"}, {"a": "2020", "b": 30000, "c":"Grand Final"}, {"a": "2018", "b": 100022, "c":"Grand Final"},  {"a": "2019", "b": 35108, "c": "Average"},{"a": "2017", "b": 	33398, "c": "Average"}, {"a": "2016", "b": 	33425, "c": "Average"},{"a": "2015", "b": 32254, "c": "Average"},{"a": "2020", "b": 5973, "c": "Average"}, {"a": "2018", "b": 36692, "c": "Average"}
     ]
   },
   "mark": {
