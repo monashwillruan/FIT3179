@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Home and Away Season Wins",
+  "title": "Home and Away Season Total Wins",
   "data": {
     "values": [
       {"Team": "Port Adelaide", "Wins": 14, "c":"silver"}, {"Team": "Brisbane", "Wins": 14, "c":"black"}, {"Team": "Richmond", "Wins": 12, "c":"Gold"},{"Team": "Geelong", "Wins": 12, "c":"black"}, {"Team": "West Coast", "Wins": 12, "c":"black"},{"Team": "St. Kilda", "Wins": 10, "c":"black"}, {"Team": "Western", "Wins": 10, "c":"black"}, {"Team": "Collingwood", "Wins": 9, "c":"black"},{"Team": "Melbourne", "Wins": 9, "c":"black"},{"Team": "Greater Western Sydney", "Wins": 8, "c":"black"}, {"Team": "Carlton", "Wins": 7, "c":"black"},{"Team": "Fremantle", "Wins": 7, "c":"black"},{"Team": "Essendon", "Wins": 6, "c":"black"},
@@ -20,12 +20,18 @@
   },
   "encoding": {
     "x": {"field": "Wins", "type": "quantitative", "axis":{"grid": false}},
-    "y": {"field": "Team", "type": "nominal", "sort": "-x", "axis":{"title":null}},
+    "y": {"field": "Team", "type": "nominal", "sort": "-x"},
     "fillOpacity": {
       "condition": {"selection": "select", "value": 1},
       "value": 0.3
     },
-    "color": {"field": "c", "type": "nominal", "scale": null},
+    "tooltip": [
+      {"field": "Team", "type": "nominal", "title": "Team: "},
+      {
+      "field": "Wins",
+      "type": "quantitative",
+      "title": "Wins: "
+    }],
     "strokeWidth": {
       "condition": [
         {
