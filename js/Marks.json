@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Marks taken in Grand Final",
+  "data": {
+    "values": [
+      {"Team": "Richmond", "Marks": 36},
+      {"Team": "Geelong", "Marks": 51}
+    ]
+  },
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "Marks", "type": "quantitative", "title": "hello"},
+    "color": {"field": "Team", "type": "nominal"},
+     "tooltip": [
+      {"field": "Team", "type": "nominal"},
+      {
+      "field": "Marks",
+      "type": "quantitative"
+    }]
+  },
+  "view": {"stroke": null},
+  "config": {
+    "background": "#fcf8f8"
+    }
+}
