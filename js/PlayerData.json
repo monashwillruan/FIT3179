@@ -13,13 +13,15 @@
       "field": "DI",
       "type": "quantitative",
       "title": "Disposals",
-      "scale": {"zero": false}
+      "scale": {"zero": false},
+      "axis": {"grid": false}
     },
     "y": {
       "field": "GL",
       "type": "quantitative",
       "title": "Goals",
-      "scale": {"zero": false}
+      "scale": {"zero": false},
+      "axis": {"grid": false}
     },
     "color": {"field": "TM", "type": "nominal", "title": "Team"},
     "tooltip": [
