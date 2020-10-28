@@ -35,7 +35,7 @@
       "title": "Google Search Interest",
       "type": "quantitative"
         },
-      "tooltip": [{"field": "State", "type": "nominal", "title": "State"},{"field": "Interest", "type": "quantitative", "title": "Search Interest:  "}]}
+      "tooltip": [{"field": "State", "type": "nominal", "title": "State"},{"field": "Interest", "type": "quantitative", "title": "Search Interest:  "}]},
  "config": {
     "background": "#fcf8f8"
     } 
