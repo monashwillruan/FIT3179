@@ -2,6 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 500,
   "height": 300,
+  "title": "Google Search Interest of term 'AFL' by State (Normalised)",
   "data": {
     "url":"https://monashwillruan.github.io/FIT3179/js/AusMap.json",
     "format": {
@@ -16,7 +17,7 @@
         "url": "https://monashwillruan.github.io/FIT3179/data/searches.csv"
       },
       "key": "Region",
-      "fields": ["Interest"]
+      "fields": ["Interest", "State"]
     }
   }],
   "projection": {
@@ -27,15 +28,14 @@
             "stroke":"white"
 
   },
+ 
   "encoding": {
        "color": {
       "field": "Interest",
       "title": "Google Search Interest",
-      "type": "quantitative",
-      "tooltip": [
-      {"field": "Interest", "type": "quantitative", "title": "Search Interest:  "}
-        }}
+      "type": "quantitative"
+        },
+      "tooltip": [{"field": "State", "type": "nominal", "title": "State"},{"field": "Interest", "type": "quantitative", "title": "Search Interest:  "}]}
          }
-}
 
 
