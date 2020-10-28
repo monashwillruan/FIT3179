@@ -38,16 +38,22 @@
       margin-top:0px;
     }
     .description-right {
-      padding-left: 50px;
+      padding-left: 25px;
     }
     .description-left{
-      padding-right: 50px;
+      padding-right: 25px;
     }
     .pure-g{
       margin-bottom: 25px;
     }
     .small-font{
         font-size: 14px;
+    }
+    .l-box {
+        padding: 20px;
+    }
+    .l-box2 {
+        padding: 2px;
     }
   </style>
 </head>
@@ -70,8 +76,8 @@
           <div id="vis2" class="vis-container"></div>
         </div>
         <div class="pure-u-1-3">
-          <h>Highs and Lows in Adelaide</h>
-          <p><b>Port Adelaide</b> secured the minor premiership in 2020 with 14 wins over Brisbane on percentage. Adelaide, the other team in the city, won the wooden spoon, finishing last with 3 wins below North Melbourne also on percentage. The eventual premiers, Richmond, secured a third position, whilst their Grand Final opponent Geelong secured fourth. It was the first time in decades that neither of the top 2 teams made the Grand Final</p>
+            <div class="l-box"> <h>Highs and Lows in Adelaide</h>
+                <p><b>Port Adelaide</b> secured the minor premiership in 2020 with 14 wins, beating <b>Brisbane</b> on percentage. <b>Adelaide</b>, the other team in the city, won the wooden spoon, finishing last with 3 wins and the worst percentage. The eventual premiers, <b>Richmond</b>, secured a third position, whilst their Grand Final opponent <b>Geelong</b> secured fourth. It was the first time in decades that neither of the top 2 teams made the Grand Final.</p></div>
         </div>
         
     </div>
@@ -79,13 +85,44 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
+        <div class="pure-u-1-3">
+            <div class="l-box"> <h>Search Interest on Google</h>
+                <p>Though the traditional home of the AFL is Victoria, the search interest for the term "AFL" was in fact strongest across the season in South Australia, which perhaps reflects the strong performance of the Port Adelaide team. Queensland, which played host to many re-scheduled games as well as the Grand Final, showed little interest in the competition; it is traditionally a rugby state. </p>
+            </div>
+        </div>
         <div class="pure-u-2-3">
           <div id="vis1"  class="vis-container"></div>
         </div>
-        </div>
-      
     </div>
-    <!-- end pure grid group -->
+        <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+            <div id="vis3"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+            <div id="vis4"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+            <div class="l-box2"> <h>Attendance Drop</h>
+                <p>There was a preciptious drop in both average attendance per game and for attendance in the Grand Final due to Covid. Across the season, several games were played to empty stadiums, whilst others were  </p>
+            </div>
+        </div>
+    </div>
+           <!-- end pure grid group -->
+
+     <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="vis5"  class="vis-container"></div>
+      </div>
+    </div>
+      <!-- end pure grid group -->
+    </div>
+       
+
+
 
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
@@ -98,22 +135,24 @@
    
 <script type="text/javascript">
   var specVis1 = "https://monashwillruan.github.io/FIT3179/js/searchInterest.json";
-  var specVis2= "https://monashwillruan.github.io/FIT3179/js/GameWins.json";
+  var specVis2 = "https://monashwillruan.github.io/FIT3179/js/GameWins.json";
+  var specVis3 = "https://monashwillruan.github.io/FIT3179/js/seasonAttendance.json";
+  var specVis4 = "https://monashwillruan.github.io/FIT3179/js/FinalAttendance.json";
+  var specVis5 = "https://monashwillruan.github.io/FIT3179/js/PlayerData.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
    vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
   }).catch(console.error);
 
-  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+  }).catch(console.error);
+
+  vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
   }).catch(console.error);
 </script>
 </body>
