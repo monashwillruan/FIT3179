@@ -1,65 +1,48 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Home and Away Season Total Wins",
+  "description": "A scatterplot describing player goals and disposals by team.",
   "data": {
-    "values": [
-      {"Team": "Port Adelaide", "Wins": 14, "c":"silver"}, {"Team": "Brisbane", "Wins": 14, "c":"black"}, {"Team": "Richmond", "Wins": 12, "c":"Gold"},{"Team": "Geelong", "Wins": 12, "c":"black"}, {"Team": "West Coast", "Wins": 12, "c":"black"},{"Team": "St. Kilda", "Wins": 10, "c":"black"}, {"Team": "Western", "Wins": 10, "c":"black"}, {"Team": "Collingwood", "Wins": 9, "c":"black"},{"Team": "Melbourne", "Wins": 9, "c":"black"},{"Team": "Greater Western Sydney", "Wins": 8, "c":"black"}, {"Team": "Carlton", "Wins": 7, "c":"black"},{"Team": "Fremantle", "Wins": 7, "c":"black"},{"Team": "Essendon", "Wins": 6, "c":"black"},
-       {"Team": "Gold Coast", "Wins": 5, "c":"black"},  {"Team": "Hawthorn", "Wins": 5, "c":"black"}, {"Team": "Sydney", "Wins": 5, "c":"black"},  {"Team": "North Melbourne", "Wins": 3, "c":"black"},{"Team": "Adelaide", "Wins": 3, "c":"black"}
-    ]
+    "url": "https://monashwillruan.github.io/FIT3179/data/PlayerStats.csv"
   },
-  "width":"container",
-  "layer":[{
-  "selection": {
-    "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
-    "select": {"type": "multi"}
-  },
-  
-  "mark": {
-    "type": "bar",
-    "stroke": "black",
-    "cursor": "pointer"
-
-  },
+  "title": "Player Goals and Disposals",
+  "mark": "point",
+  "width": "container",
+  "height":400,
   "encoding": {
-    "x": {"field": "Wins", "type": "quantitative", "axis":{"grid": false}},
-    "y": {"field": "Team", "type": "nominal", "sort": "-x"},
-    "fillOpacity": {
-      "condition": {"selection": "select", "value": 1},
-      "value": 0.3
-    },
-    "tooltip": [
-      {"field": "Team", "type": "nominal", "title": "Team: "},
-      {
-      "field": "Wins",
+    "x": {
+      "field": "DI",
       "type": "quantitative",
-      "title": "Wins: "
-    }],
-    "strokeWidth": {
-      "condition": [
-        {
-          "test": {
-            "and": [
-              {"selection": "select"},
-              "length(data(\"select_store\"))"
-            ]
-          },
-          "value": 2
-        },
-        {"selection": "highlight", "value": 1}
-      ],
-      "value": 0
+      "title": "Disposals",
+      "scale": {"zero": false},
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "GL",
+      "type": "quantitative",
+      "title": "Goals",
+      "scale": {"zero": false},
+      "axis": {"grid": false}
+    },
+    "color": {"field": "TM", "type": "nominal", "title": "Team"},
+    "tooltip": [
+      {"field": "Player", "type": "nominal", "title": "Player Name: "},
+      {
+      "field": "GL",
+      "type": "quantitative",
+      "title": "Goals"
+    },
+    {
+      "field": "DI",
+      "type": "quantitative",
+      "title": "Disposals"
     }
-  }},
-  {
-  "mark": {
-    "dx": 125,
-    "dy": 50,
-    "type": "text",
-    "font": "sans-serif",
-    "fontWeight": 100,
-    "fontSize": 12,
-    "lineBreak": "/n",
-    "text": "The competition was very even,/n with no one team dominating, /n and no one team lagging far behind."
-  }
-  }]
+    ],
+    "opacity":{"condition":{"selection":"team","value":0.9},"value":0.2},
+    "size":{"condition":{"test":"datum.GL >= Goals_Above && datum.DI >= Disposals_Above"}, "value":0}
+  },
+  "selection":{"team":{"type":"multi","fields":["TM"],"bind":"legend"}},
+  "params":[{"name":"Goals_Above","value":0,"bind":{"input":"range","min":0,"max":30,
+"step":1,"name":"Minimum Goals:    "}},
+{"name":"Disposals_Above","value":0,"bind":{"input":"range","min":0,"max":500,
+"step":10,"name":"Minimum Dispoals:  "}}]
 }
