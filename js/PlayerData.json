@@ -59,7 +59,7 @@
       "axis": {"grid": false}
     },
     "text":{"field":"Player","type":"nominal"},
-    "color":{"value":"black"},"opacity":{"condition":{"test":"datum['Player']=='Hawkins, Tom'||datum['Player']=='Neale, Lachie'","value":1},"value":0}
+    "color":{"value":"black"},"opacity":{"condition":{"test":"datum['Player']=='Hawkins, Tom' && datum.GL >= Goals_Above && datum.DI >= Disposals_Above||datum['Player']=='Neale, Lachie' && datum.GL >= Goals_Above && datum.DI >= Disposals_Above","value":1},"value":0}
     }
   }],
   "params":[{"name":"Goals_Above","value":0,"bind":{"input":"range","min":0,"max":30,
