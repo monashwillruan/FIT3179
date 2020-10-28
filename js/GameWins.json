@@ -7,11 +7,13 @@
        {"Team": "Gold Coast", "Wins": 5, "c":"black"},  {"Team": "Hawthorn", "Wins": 5, "c":"black"}, {"Team": "Sydney", "Wins": 5, "c":"black"},  {"Team": "North Melbourne", "Wins": 3, "c":"black"},{"Team": "Adelaide", "Wins": 3, "c":"black"}
     ]
   },
+  "layer":[{
   "width":"container",
   "selection": {
     "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
     "select": {"type": "multi"}
   },
+  
   "mark": {
     "type": "bar",
     "stroke": "black",
@@ -47,7 +49,18 @@
       ],
       "value": 0
     }
-  },
+  }},
+  {
+  "mark": {
+    "dx": 125,
+    "dy": 50,
+    "type": "text",
+    "fontWeight": "lighter",
+    "fontSize": 13,
+    "lineBreak": "/n",
+    "text": "The competition was very even,/n with no one team dominating, /n and no one team lagging far behind."
+  }
+  }],
   "config": {
     "scale": {
       "bandPaddingInner": 0.2
