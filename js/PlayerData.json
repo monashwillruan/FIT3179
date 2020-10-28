@@ -36,7 +36,7 @@
     }
     ],
     "opacity":{"condition":{"selection":"team","value":0.9},"value":0.2},
-    "size":{"condition":{"test":"datum.GL > Goals_Above && datum.DI>Disposals_Above"}, "value":0}
+    "size":{"condition":{"test":"datum.GL >= Goals_Above && datum.DI >= Disposals_Above"}, "value":0}
   },
   "selection":{"team":{"type":"multi","fields":["TM"],"bind":"legend"}},
   "params":[{"name":"Goals_Above","value":0,"bind":{"input":"range","min":0,"max":30,
