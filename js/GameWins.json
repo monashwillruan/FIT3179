@@ -52,5 +52,7 @@
     "scale": {
       "bandPaddingInner": 0.2
     }
+    "background:{
+    "color":"#fcf8f8"
   }
 }
