@@ -1,9 +1,9 @@
-Region,Interest
-3,100
-5,93
-1,91
-4,83
-6,71
-7,35
-2,32
-0,19
+Region,Interest,State
+3,100,"South Australia"
+5,93,"Tasmania"
+1,91,"Victoria"
+4,83,"Western Australia"
+6,71,"Northern Territory"
+7,35,"Australian Captial Territory"
+2,32,"Queensland"
+0,19,"New South Wales"
