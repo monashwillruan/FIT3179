@@ -30,8 +30,11 @@
   "encoding": {
        "color": {
       "field": "Interest",
-      "type": "quantitative"
-      }
+      "title": "Google Search Interest",
+      "type": "quantitative",
+      "tooltip": [
+      {"field": "Interest", "type": "quantitative", "title": "Search Interest:  "}
+        }}
          }
 }
 
