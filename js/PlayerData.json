@@ -6,7 +6,7 @@
   },
   "title": "Player Goals and Disposals",
   "mark": "point",
-  "width": 800,
+  "width": "container",
   "height":400,
   "encoding": {
     "x": {
