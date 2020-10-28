@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A simple bar chart with embedded data.",
-  "title": "Average Attedance by Season",
+  "title": "Average Attendance by Season",
   "data": {
     "values": [
       {"a": "2019", "b": 35108}, {"a": "2020", "b": 5973}, {"a": "2018", "b": 36692 }
     ]
   },
-  "width": 250,
+  "width": 200,
   "mark": "bar",
   "encoding": {
     "x": {"field": "a", "type": "nominal", "title": "Season", "axis": {"labelAngle": 0}},
