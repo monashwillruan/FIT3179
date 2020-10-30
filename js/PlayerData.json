@@ -24,7 +24,7 @@
       "scale": {"zero": false},
       "axis": {"grid": false}
     },
-    "color": {"field": "TM", "type": "nominal", "title": "Team"},
+    "color": {"field": "TM", "type": "nominal", "title": "Team", "scale":{"range":["#1f77b4", "#aec7e8", "#ff7f0e","#ffbb78", "#2ca02c","#98df8a", "#d62728", "#ff9896", "#9467bd","#c5b0d5", "#8c564b", "#c49c94", "#e377c2", "#f7b6d2", "#7f7f7f", "#c7c7c7", "#bcbd22", "#dbdb8d", "#17becf", "#9edae5"]}},
     "tooltip": [
       {"field": "Player", "type": "nominal", "title": "Player Name: "},
       {
@@ -38,7 +38,7 @@
       "title": "Disposals"
     }
     ],
-    "opacity":{"condition":{"selection":"team","value":0.9},"value":0.2},
+    "opacity":{"condition":{"selection":"team","value":1},"value":0.1},
     "size":{"condition":{"test":"datum.GL >= Goals_Above && datum.DI >= Disposals_Above"}, "value":0}
   },
   "selection":{"team":{"type":"multi","fields":["TM"],"bind":"legend"}}
