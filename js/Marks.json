@@ -10,7 +10,7 @@
   "mark": {"type": "arc", "innerRadius": 50},
   "encoding": {
     "theta": {"field": "Marks", "type": "quantitative", "title": "hello"},
-    "color": {"field": "Team", "type": "nominal"},
+    "color": {"field": "Team", "type": "nominal", "scale": {"range":["#2ca02c", "#d62728"]}},
      "tooltip": [
       {"field": "Team", "type": "nominal"},
       {
