@@ -5,14 +5,18 @@
   "data": {"values":[{"Team": "Richmond", "Source": "Goals", "points": 72, "number": 12}, {"Team": "Richmond", "Source": "Points", "points": 9, "number" : 9}, {"Team": "Geelong", "Source": "Goals", "points": 42, "number": 7}, {"Team": "Geelong", "Source": "Points", "points": 8, "number": 8}]},
   "mark": "bar",
   "encoding": {
-    "x": {"aggregate": "sum", "field": "points", "axis":{"title":"Total Score"}},
+    "x": {"aggregate": "sum", "field": "points", "axis":{"title":"Total Score", "grid":false}},
     "y": {"field": "Team", "sort": "-x"},
     "color": {"field": "Source"},
     "tooltip": [
+       {
+      "field": "Source",
+      "type": "nominal"
+    },
       {
       "field": "number",
-      "title": "title",
-      "type": "quantitative"
+      "type": "quantitative",
+      "title": "Total Scored"
     }]
   },
   "config": {
