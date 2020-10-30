@@ -228,19 +228,16 @@
   vegaEmbed('#vis7', specVis7, {"actions": false}).then(function(result) {
   }).catch(console.error);
 
-
-  window.addEventListener("resize", positionCommentary);
-
+window.addEventListener("resize", positionCommentary);
 
 function positionCommentary(){
     let canvas = document.getElementsByTagName("canvas")[0];
+    let scrollY = (window.pageYOffset || document.documentElement.scrollTop);
     let x = canvas.getBoundingClientRect().left + canvas.width - 220;
-    let y = canvas.getBoundingClientRect().top + canvas.height - 125;
-    let commentaryEle = document.getElementById("commentaryEle");
+    let y = canvas.getBoundingClientRect().top + scrollY + canvas.height - 125;
     if (!commentaryEle){
         commentaryEle = document.createElement("commentaryEle");
-        commentaryEle.id = "commentaryEle";
-        commentaryEle.innerHTML = "The competition was very even, <br> with no one team dominating, <br>and no one team lagging far <br>behind.";
+        commentaryEle.textContent = "This is commentary";
         commentaryEle.style.position = "absolute";
         document.body.appendChild(commentaryEle);
     }
