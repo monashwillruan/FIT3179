@@ -78,7 +78,7 @@
     }
   </style>
 </head>
-<body>
+<body onload="positionCommentary()">
 
  <div class="page">
 
@@ -235,6 +235,7 @@ function positionCommentary(){
     let scrollY = (window.pageYOffset || document.documentElement.scrollTop);
     let x = canvas.getBoundingClientRect().left + canvas.width - 220;
     let y = canvas.getBoundingClientRect().top + scrollY + canvas.height - 125;
+    let commentaryEle = document.getElementbyId("commentaryEle");
     if (!commentaryEle){
         commentaryEle = document.createElement("commentaryEle");
         commentaryEle.textContent = "This is commentary";
@@ -244,7 +245,7 @@ function positionCommentary(){
     commentaryEle.style.left = x + "px";
     commentaryEle.style.top = y + "px";
 }
-setTimeout(()=>{positionCommentary()},1500);
+//setTimeout(()=>{positionCommentary()},1500);
 </script>
 </body>
 </html>
