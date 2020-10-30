@@ -1,5 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": "container",
+  "title": "Grand Final Score",
   "data": {"values":[{"Team": "Richmond", "Source": "Goals", "points": 72, "number": 12}, {"Team": "Richmond", "Source": "Points", "points": 9, "number" : 9}, {"Team": "Geelong", "Source": "Goals", "points": 42, "number": 7}, {"Team": "Geelong", "Source": "Points", "points": 8, "number": 8}]},
   "mark": "bar",
   "encoding": {
